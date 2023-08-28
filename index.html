@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Calender Using Javascript - Greatstack</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="calendar">
+            <div class="left">
+                <p id="date">01</p>
+                <p id="day">sunday</p>
+        
+            </div>
+            <div class="right">
+            <p id="month">january</p>
+            <p id="year">2020</p>
+            </div>
+        </div>
+    </div>
+    
+        <script>
+            
+            const date = document.getElementById("date");
+            const day = document.getElementById("day");
+            const month = document.getElementById("month");
+            const year = document.getElementById("year");
+            
+            const today = new Date();
+            
+            const weekdays = ["sunday","monday","thesday","wednesday","thurday","friday","saturday"];
+            const allmonth = ["january","february","march","april","may","june","july","august","september","october","november"
+            ,"december"];
+            
+            date.innerHTML = today.getDate();
+            day.innerHTML = weekdays[today.getDay()];
+            month.innerHTML = allmonth[today.getMonth()];
+            year.innerHTML = today.getFullYear();
+
+            
+    </script>
+
+</body>
+</html>
